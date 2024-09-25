@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 function NavBar() {
   const [scrolled, setScrolled] = useState(false);
 
-  // Change navbar background on scroll
+  
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 50) {

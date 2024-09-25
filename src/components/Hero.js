@@ -1,5 +1,5 @@
 import React from 'react';
-import phoneimg from '../assets/phoneimg.jpg';  // Updated image path
+import phoneimg from '../assets/phoneimg.jpg';  
 
 function Hero() {
   return (

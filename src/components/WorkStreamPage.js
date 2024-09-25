@@ -4,7 +4,7 @@ function WorkStreamsPage() {
   return (
     <div className="bg-black min-h-screen flex flex-col justify-center items-center text-white">
       
-      {/* Text Section */}
+      
       <div className="text-center px-6 lg:px-24">
         <h1 className="text-4xl lg:text-6xl font-bold mb-6">
           Stay on top of your most important streams of work
@@ -15,15 +15,15 @@ function WorkStreamsPage() {
         </p>
       </div>
 
-      {/* Image Section */}
+      
       <div className="relative w-full lg:w-1/2">
         <img
-          src={ Phone2} // Replace with actual image path
+          src={ Phone2} 
           alt="Phone Inbox"
           className="mx-auto rounded-lg"
         />
 
-        {/* Swipe Left / Right Instructions */}
+        
         <div className="absolute top-1/2 left-0 text-gray-500 text-xs transform -translate-y-1/2 -translate-x-6 rotate-90">
           SWIPE RIGHT TO MARK AS UNREAD
         </div>

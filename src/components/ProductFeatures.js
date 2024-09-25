@@ -6,7 +6,7 @@ function ProductFeatures() {
   return (
     <div className="bg-black text-white min-h-screen flex flex-col lg:flex-row justify-center items-center p-10 space-y-10 lg:space-y-0 lg:space-x-10">
       
-      {/* Ultraportable Section */}
+    
       <div className="bg-black shadow-lg rounded-lg p-6 w-full lg:w-1/2">
         <div className="flex flex-col justify-center items-center">
           <img
@@ -21,7 +21,7 @@ function ProductFeatures() {
         </div>
       </div>
 
-      {/* Fully Native Section */}
+      
       <div className="bg-black shadow-lg rounded-lg p-6 w-full lg:w-1/2">
         <div className="flex flex-col justify-center items-center">
           <div className="flex space-x-4 mb-4">

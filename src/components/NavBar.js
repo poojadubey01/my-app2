@@ -5,7 +5,7 @@ function NavBar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="fixed w-[80%] h-[8%] max-w-7xl top-4 left-1/2 transform -translate-x-1/2 z-20 bg-black/40 backdrop-blur-xl rounded-full shadow-lg py-4 px-8 transition-all duration-300 ease-in-out border border-opacity-30" style={{ borderColor: '#23252a' }}>
+    <nav className="fixed w-[90%] xl:w-[70%] h-[3rem] max-w-7xl top-4 left-1/2 transform -translate-x-1/2 z-20 bg-black/40 backdrop-blur-xl rounded-[15px] shadow-lg py-4 px-4 transition-all duration-300 ease-in-out border border-opacity-30" style={{ borderColor: '#23252a' }}>
       <div className="flex justify-between items-center h-full">
 
         
@@ -35,7 +35,7 @@ function NavBar() {
           ))}
         </div>
 
-       
+<div className= "flex items-center justify-center gap-[20px]">
         <div className="flex items-center space-x-2"> 
           <button 
             className="text-white font-medium text-sm px-2 py-1 rounded-lg hover:bg-gray-700 transition duration-300" 
@@ -56,7 +56,7 @@ function NavBar() {
             {isOpen ? (
               <XMarkIcon className="w-4 h-4" />
             ) : (
-              <div className="flex-2 flex-col space-y-1"> 
+              <div className="flex-2 flex-col space-y-1 justify-center items-center"> 
                 <span className="block w-4 h-0.5 bg-white"></span>
                 <span className="block w-4 h-0.5 bg-white"></span>
               </div>
@@ -65,9 +65,9 @@ function NavBar() {
         </div>
       </div>
 
-     
+     </div>
       {isOpen && (
-        <div className="lg:hidden mt-4 space-y-4 text-center text-white">
+        <div className="lg:hidden mt-4 space-y-4 text-center text-white justify-between">
           {['Features', 'Method', 'Customers', 'Changelog', 'Pricing', 'Company', 'Contact'].map((link) => (
             <a key={link} href="#" className="block hover:text-gray-300 transition duration-300">
               {link}

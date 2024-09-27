@@ -5,6 +5,7 @@ import DownloadButtons from './components/DownloadButtons';  // Updated path
 import FrameComp from './components/FrameComp';
 import ProductFeatures from './components/ProductFeatures';
 import  WorkStreamsPage from './components/WorkStreamPage';
+import InteractivePage from './components/InteractivePage';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <FrameComp/>
       <ProductFeatures />
       <WorkStreamsPage />
+      <InteractivePage />
     </div>
   );
 }

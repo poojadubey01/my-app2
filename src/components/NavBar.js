@@ -5,7 +5,7 @@ function NavBar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="fixed w-[90%] xl:w-[70%] h-[3rem] max-w-7xl top-4 left-1/2 transform -translate-x-1/2 z-20 bg-black/40 backdrop-blur-xl rounded-[15px] shadow-lg py-4 px-4 transition-all duration-300 ease-in-out border border-opacity-30" style={{ borderColor: '#23252a' }}>
+    <nav className="fixed w-[90%] xl:w-[77%] h-[3rem] max-w-7xl top-4 left-1/2 transform -translate-x-1/2 z-20 bg-black/40 backdrop-blur-xl rounded-[15px] shadow-lg py-4 px-4 transition-all duration-300 ease-in-out border border-opacity-30" style={{ borderColor: '#23252a' }}>
       <div className="flex justify-between items-center h-full">
 
         

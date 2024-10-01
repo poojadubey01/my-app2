@@ -11,7 +11,7 @@ import LoginPage from './components/LoginPage';
 function HomePage() {
   return (
     <>
-      <Hero />
+      <Hero/>
       <DownloadButtons />
       <FrameComp />
       <ProductFeatures />

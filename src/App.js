@@ -5,23 +5,35 @@ import Hero from './components/Hero';
 import DownloadButtons from './components/DownloadButtons';  
 import FrameComp from './components/FrameComp';
 import ProductFeatures from './components/ProductFeatures';
-import  WorkStreamsPage from './components/WorkStreamPage';
-import InteractivePage from './components/InteractivePage';
+import WorkStreamsPage from './components/WorkStreamPage';
+import LoginPage from './components/LoginPage';
+
+function HomePage() {
+  return (
+    <>
+      <Hero />
+      <DownloadButtons />
+      <FrameComp />
+      <ProductFeatures />
+      <WorkStreamsPage />
+    </>
+  );
+}
 
 function App() {
   return (
-    <div className="bg-black text-white min-h-screen">
-      <NavBar/>
-      <Hero />
-      <DownloadButtons />
-      <FrameComp/>
-      <ProductFeatures />
-      <WorkStreamsPage />
-      <InteractivePage />
+    <Router>
       
-    </div>
+      <NavBar />
+
+      <Routes>
+        <Route path="/" element={<HomePage />} />   {/* Home page route */}
+        <Route path="/login" element={<LoginPage />} />   {/* Login page route */}
+      </Routes>
+    </Router>
   );
 }
 
 export default App;
+
 

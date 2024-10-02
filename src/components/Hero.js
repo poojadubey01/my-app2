@@ -51,11 +51,11 @@ function Hero() {
         />
       </div>
       
-      <div className="absolute bottom-0 left-0 w-full h-1/5 bg-black z-10"></div>
+      <div className="absolute bottom-0 left-0 w-full h-[30%] bg-black z-10"></div>
        
 
      
-      <div className="absolute bottom-0 left-1/6 transform -translate-x-4 z-20 text-white text-left">
+      <div className="absolute bottom-2 left-16 z-20 text-white text-left">
   <h1 className="text-5xl font-bold mb-6 text-left">
     The portable companion <br/>
     to the Linear system
@@ -64,6 +64,7 @@ function Hero() {
     Complex workflows in compact form.<br/> Available for iOS and Android.
   </p>
 </div>
+
 
     </section>
   );

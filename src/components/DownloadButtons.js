@@ -4,7 +4,7 @@ function DownloadButtons() {
   return (
     <section className="flex justify-center space-x-4 mt-8 bg-black">
       <div className="flex items-center space-x-2 hover:scale-105 transition transform duration-300">
-        {/* QR Code Image */}
+       
         <img src={qrCode} alt="QR Code" className="w-16 h-16" />
         <div className="flex flex-col items-center space-y-4">
           <p className="text-gray-300">Scan to download</p>

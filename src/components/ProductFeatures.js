@@ -14,7 +14,7 @@ function ProductFeatures() {
             alt="Phone"
             className="rounded-lg mb-4"
           />
-          <h2 className="text-2xl font-bold mb-2">Ultraportable</h2>
+          <h2 className="text-xl font-bold mb-2">Ultraportable</h2>
           <p className="text-gray-400 text-center">
             A from-the-ground-up redesigned user interface makes Linear Mobile both light in weight and strong in performance.
           </p>

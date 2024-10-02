@@ -40,9 +40,10 @@ function Hero() {
         <img
           src={hero}
           alt="Phone"
-          className="absolute top-0 left-0 w-full h-30 object-cover z-0"
+          className="absolute top-0 left-0 w-full h-50 object-cover z-0"
         />
-         <div className="absolute bottom-0 left-0 w-full h-1/6 bg-gradient-to-t from-black via-transparent to-transparent z-10"></div>
+         <div className="absolute bottom-0 left-0 w-full z-10" style={{ height: '14.2857%' }}></div>
+         
        
         <canvas
           ref={canvasRef}
@@ -50,19 +51,20 @@ function Hero() {
         />
       </div>
       
-      <div className="absolute bottom-0 left-0 w-full h-1/3 bg-black z-10"></div>
+      <div className="absolute bottom-0 left-0 w-full h-1/5 bg-black z-10"></div>
        
 
      
-      <div className="relative z-20 text-bottom text-white">
-        <h1 className="text-4xl font-bold mb-6 left-0">
-          The portable companion <br/>
-          to the Linear system
-        </h1>
-        <p className="text-lg text-gray mb-8">
-          Complex workflows in compact form.<br/> Available for iOS and Android.
-        </p>
-      </div>
+      <div className="absolute bottom-0 left-1/6 transform -translate-x-4 z-20 text-white text-left">
+  <h1 className="text-5xl font-bold mb-6 text-left">
+    The portable companion <br/>
+    to the Linear system
+  </h1>
+  <p className="text-lg text-gray-400 mb-8">
+    Complex workflows in compact form.<br/> Available for iOS and Android.
+  </p>
+</div>
+
     </section>
   );
 }

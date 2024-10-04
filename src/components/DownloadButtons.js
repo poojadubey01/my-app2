@@ -1,4 +1,4 @@
-import React from 'react';
+/*import React from 'react';
 import qrCode from '../assets/qr-code.jpg';
 function DownloadButtons() {
   return (
@@ -35,4 +35,4 @@ function DownloadButtons() {
   );
 }
 
-export default DownloadButtons;
+export default DownloadButtons;*/

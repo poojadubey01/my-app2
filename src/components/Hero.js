@@ -138,7 +138,9 @@ function Hero() {
 }
 
 export default Hero;*/
-import React, { useEffect, useRef } from "react";
+
+
+/*import React, { useEffect, useRef } from "react";
 import hero from "../assets/hero.jpg";
 
 function Hero() {
@@ -187,7 +189,7 @@ function Hero() {
       <img
         src={hero}
         alt="Phone"
-        className="absolute top-0 left-1/2 transform -translate-x-1/2 w-full h-full object-cover z-0"
+        className="absolute top-0 left-1/2 transform -translate-x-1/2 w-full h-50 object-cover z-0"
       />
 
       
@@ -201,9 +203,10 @@ function Hero() {
 
      
       <div className="absolute bottom-0 left-0 w-full h-[20%] bg-black z-10"></div>
+      
 
       
-      <div className="absolute bottom-10 md:bottom-20 left-1/2 transform -translate-x-1/2 z-20 text-center md:text-left px-4 w-full max-w-2xl">
+      <div className="absolute bottom-6 md:bottom-50 left-1/2 transform -translate-x-1/2 z-20 text-center md:text-left px-4 w-full max-w-2xl">
         <h1 className="text-3xl md:text-5xl font-bold text-white mb-4">
           The portable companion <br /> to the Linear system
         </h1>
@@ -230,5 +233,111 @@ function Hero() {
   );
 }
 
+export default Hero;*/
+
+import React, { useEffect, useRef } from "react";
+import hero from "../assets/hero.jpg";
+
+
+function Hero() {
+  const canvasRef = useRef(null);
+
+  const createNoise = () => {
+    const canvas = canvasRef.current;
+    const ctx = canvas.getContext("2d");
+    canvas.width = window.innerWidth; // Responsive width
+    canvas.height = window.innerHeight; // Responsive height
+
+    const imageData = ctx.createImageData(canvas.width, canvas.height);
+    const data = imageData.data;
+
+    for (let i = 0; i < data.length; i += 4) {
+      const noiseValue = Math.random() * 255; 
+      data[i] = noiseValue; 
+      data[i + 1] = noiseValue; 
+      data[i + 2] = noiseValue; 
+      data[i + 3] = Math.random() * 50; 
+    }
+
+    ctx.putImageData(imageData, 0, 0);
+  };
+
+  
+  useEffect(() => {
+    createNoise();
+    const interval = setInterval(createNoise, 100); 
+
+   
+    const resizeCanvas = () => {
+      createNoise(); 
+    };
+    window.addEventListener("resize", resizeCanvas);
+
+    return () => {
+      clearInterval(interval);
+      window.removeEventListener("resize", resizeCanvas);
+    };
+  }, []);
+
+  return (
+    <section className="relative h-screen bg-gray text-black flex flex-col items-start justify-start animate-fadeIn bg-black z-0 p-0">
+      
+    
+      <img
+        src={hero}
+        alt="Phone"
+        className="absolute top-0 left-1/2 transform -translate-x-1/2 w-full h-50 object-cover z-0"
+      />
+
+    
+      <canvas
+        ref={canvasRef}
+        className="absolute top-0 left-0 w-full h-full z-0 pointer-events-none"
+      />
+
+     
+      <div className="absolute w-full h-[20vh] top-[60%] bg-gradient-to-t from-black to-transparent"></div>
+      <div className="absolute bottom-0 left-0 w-full h-[20%] bg-black z-10"></div>
+
+     
+       <div className="relative bottom-10 md:bottom-20 left-1/3 top-[31rem] transform -translate-x-1/2 z-20 text-center md:text-left px-4 w-full max-w-2xl">
+        
+        <p className="text-xs md:text-lg text-blue-300 mb-4">
+          Introducing Linear Mobile
+        </p>
+
+        <h1 className="text-5xl md:text-5xl font-bold text-white mb-6">
+          The portable companion <br /> to the Linear system
+        </h1>
+
+        <p className="text-lg md:text-xl text-gray-300 mb-4">
+          Complex workflows in compact form. <br /> Available for iOS and Android.
+        </p>
+
+       
+        <div className="flex flex-col md:flex-row gap-4 justify-center md:justify-start mt-4">
+          <a
+            href="#"
+            className="bg-white text-black py-3 px-6 rounded-lg text-center w-full md:w-auto hover:bg-gray-200"
+          >
+            Download on the App Store
+          </a>
+          <a
+            href="#"
+            className="bg-white text-black py-3 px-6 rounded-lg text-center w-full md:w-auto hover:bg-gray-200"
+          >
+            Get it on Google Play
+          </a>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 export default Hero;
+
+
+
+
+
 

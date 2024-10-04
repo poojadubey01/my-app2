@@ -3,12 +3,12 @@ import qrCode from '../assets/qr-code.jpg';
 function DownloadButtons() {
   return (
     <section className="flex justify-center space-x-4 mt-8 bg-black">
-      <div className="flex items-center space-x-2 hover:scale-105 transition transform duration-300">
+      <div className="flex items-center bg-black space-x-2 hover:scale-105 transition transform duration-300">
        
         <img src={qrCode} alt="QR Code" className="w-16 h-16" />
         <div className="flex flex-col items-center space-y-4">
           <p className="text-gray-300">Scan to download</p>
-          {/* Download buttons */}
+          
           <div className="flex space-x-4">
             <button className="inline-flex items-center px-6 py-3 rounded-lg bg-gray-600 text-gray-50">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="fill-current w-8 h-8 text-gray-50">

@@ -1,20 +1,21 @@
-import React, { useState } from 'react';
-import { XMarkIcon } from '@heroicons/react/24/outline'; 
-import { Link } from 'react-router-dom';
+import React, { useState } from "react";
+import { XMarkIcon } from "@heroicons/react/24/outline";
+import { Link } from "react-router-dom";
 
 function NavBar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="fixed w-[90%] xl:w-[77%] h-[3rem] max-w-7xl top-4 left-1/2 transform -translate-x-1/2 z-20 bg-black/40 backdrop-blur-xl rounded-[15px] shadow-lg py-4 px-4 overflow-hidden transition-all duration-300 ease-in-out border border-opacity-30" style={{ borderColor: '#23252a' }}>
+    <nav
+      className="fixed w-[90%] xl:w-[77%] h-[3rem] max-w-7xl top-4 left-1/2 transform -translate-x-1/2 z-20 bg-black/40 backdrop-blur-xl rounded-[15px] shadow-lg py-4 px-4 overflow-hidden transition-all duration-300 ease-in-out border border-opacity-30"
+      style={{ borderColor: "#23252a" }}
+    >
       <div className="flex justify-between items-center h-full">
-        
-       
         <div className="flex items-center space-x-2">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
-            width="24" 
+            width="24"
             height="24"
             viewBox="0 0 100 100"
             className="w-4 h-4"
@@ -29,54 +30,74 @@ function NavBar() {
 
         {/* Links for larger screens */}
         <div className="hidden lg:flex space-x-14 text-sm font-medium text-gray-300">
-          {['Features', 'Method', 'Customers', 'Changelog', 'Pricing', 'Company', 'Contact'].map((link) => (
-            <a key={link} href="#" className="hover:text-white transition duration-300">
+          {[
+            "Features",
+            "Method",
+            "Customers",
+            "Changelog",
+            "Pricing",
+            "Company",
+            "Contact"
+          ].map(link =>
+            <a
+              key={link}
+              href="#"
+              className="hover:text-white transition duration-300"
+            >
               {link}
             </a>
-          ))}
+          )}
         </div>
 
-        
         <div className="flex items-center space-x-2">
-        
-          <Link to="/login" className="text-white font-medium text-sm px-2 py-1 rounded-lg hover:bg-gray-700 transition duration-300" style={{ backgroundColor: '#23252a' }}>
+          <Link
+            to="/login"
+            className="text-white font-medium text-sm px-2 py-1 rounded-lg hover:bg-gray-700 transition duration-300"
+            style={{ backgroundColor: "#23252a" }}
+          >
             Log in
           </Link>
 
-          
           <button className="font-medium text-sm bg-white text-black px-2 py-1 rounded-lg hover:bg-gray-200 transition duration-300">
             Sign up
           </button>
         </div>
 
-       
         <div className="lg:hidden">
           <button
             onClick={() => setIsOpen(!isOpen)}
             className="text-white focus:outline-none"
           >
-            {isOpen ? (
-              <XMarkIcon className="w-4 h-4" />
-            ) : (
-              <div className="flex flex-col space-y-1 justify-center items-center"> 
-                <span className="block w-4 h-0.5 bg-white"></span>
-                <span className="block w-4 h-0.5 bg-white"></span>
-              </div>
-            )}
+            {isOpen
+              ? <XMarkIcon className="w-4 h-4" />
+              : <div className="flex flex-col space-y-1 justify-center items-center">
+                  <span className="block w-4 h-0.5 bg-white" />
+                  <span className="block w-4 h-0.5 bg-white" />
+                </div>}
           </button>
         </div>
       </div>
 
-      
-      {isOpen && (
+      {isOpen &&
         <div className="lg:hidden mt-4 space-y-4 text-center text-white justify-between">
-          {['Features', 'Method', 'Customers', 'Changelog', 'Pricing', 'Company', 'Contact'].map((link) => (
-            <a key={link} href="#" className="block hover:text-gray-300 transition duration-300">
+          {[
+            "Features",
+            "Method",
+            "Customers",
+            "Changelog",
+            "Pricing",
+            "Company",
+            "Contact"
+          ].map(link =>
+            <a
+              key={link}
+              href="#"
+              className="block hover:text-gray-300 transition duration-300"
+            >
               {link}
             </a>
-          ))}
-        </div>
-      )}
+          )}
+        </div>}
     </nav>
   );
 }

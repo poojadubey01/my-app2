@@ -194,7 +194,6 @@ function Hero() {
 
 export default Hero;*/
 
-
 import React, { useEffect, useRef } from "react";
 import hero from "../assets/hero.jpg"; 
 
@@ -248,7 +247,7 @@ function Hero() {
       style={{
         backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1)), url(${hero})`,
         backgroundSize: "cover",
-        backgroundPosition: "center"
+        backgroundPosition: "center top 50px"  // Shift the background down by 50px
       }}
     >
       <canvas
@@ -259,7 +258,7 @@ function Hero() {
       <div className="absolute w-full h-[20vh] top-[60%] bg-gradient-to-t from-black to-transparent" />
       <div className="absolute bottom-0 left-0 w-full h-[20%] bg-black z-10" />
 
-      
+      {/* Content */}
       <div className="relative bottom-10 md:bottom-20 left-1/3 top-[35rem] transform -translate-x-1/2 z-20 text-center md:text-left px-4 w-full max-w-2xl">
         <p
           className="mb-4"
@@ -302,10 +301,8 @@ function Hero() {
         </p>
       </div>
 
-      
+      {/* QR Code Section */}
       <div className="absolute right-[15%] top-[38rem] flex flex-col gap-4">
-        {" "}
-        {/* QR Box */}
         <div className="p-2 border-2 border-gray-300 rounded-lg bg-black hover:bg-gray-800 transition duration-300">
           <p
             style={{
@@ -326,9 +323,8 @@ function Hero() {
             />
           </div>
         </div>
-        
+
         <div className="grid grid-cols-2 gap-2">
-       
           <a
             href="#"
             className="flex items-center justify-between p-2 border-2 border-gray-300 rounded-lg bg-black hover:bg-gray-800 transition duration-300"
@@ -354,7 +350,6 @@ function Hero() {
             <span className="text-white text-lg">&rarr;</span>
           </a>
 
-          
           <a
             href="#"
             className="flex items-center justify-between p-2 border-2 border-gray-300 rounded-lg bg-black hover:bg-gray-800 transition duration-300"
@@ -386,6 +381,7 @@ function Hero() {
 }
 
 export default Hero;
+
 
 
 

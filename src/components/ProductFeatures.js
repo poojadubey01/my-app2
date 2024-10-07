@@ -1,5 +1,5 @@
 import React from 'react';
-import Phone3 from '../assets/phone3.jpg';
+import Phone3 from '../assets/phone33.jpg';
 import Swift from '../assets/swift.png';
 import Kotlin from '../assets/kotlin.png';
 function ProductFeatures() {

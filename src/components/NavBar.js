@@ -201,6 +201,7 @@ function NavBar() {
               
               <div className="flex flex-col space-y-6 text-xl font-semibold">
                 {[
+                  
                   "Plan",
                   "Pricing",
                   "About",

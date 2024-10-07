@@ -60,7 +60,7 @@ function NavBar() {
             ))}
           </div>
 
-          <div className="hidden md:flex lg:hidden space-x-32 text-sm font-medium text-gray-300">
+          <div className="hidden md:flex lg:hidden space-x-24 text-sm font-medium text-gray-300">
             
             {["Features", "Pricing", "Company"].map((link) => (
               <a

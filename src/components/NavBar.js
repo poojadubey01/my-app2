@@ -7,20 +7,17 @@ function NavBar() {
 
   return (
     <>
-      
       <div
         className={`fixed inset-0 bg-black/60 backdrop-blur-md z-10 transition-opacity duration-500 ease-in-out ${
           isOpen ? "opacity-100" : "opacity-0 pointer-events-none"
         }`}
       />
 
-      
       <nav
-        className="fixed w-[90%] xl:w-[77%] h-[3rem] max-w-7xl top-4 left-1/2 transform -translate-x-1/2 z-20 bg-black/40 backdrop-blur-xl rounded-[15px] shadow-lg py-4 px-4 transition-all duration-300 ease-in-out border border-opacity-30"
+        className="fixed w-[95%] xl:w-[77%] h-[3rem] max-w-7xl top-4 left-1/2 transform -translate-x-1/2 z-20 bg-black/40 backdrop-blur-xl rounded-[15px] shadow-lg py-4 px-4 transition-all duration-300 ease-in-out border border-opacity-30"
         style={{ borderColor: "#23252a" }}
       >
         <div className="flex justify-between items-center h-full">
-         
           <div className="flex items-center space-x-2">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -38,9 +35,7 @@ function NavBar() {
             <span className="text-sm font-semibold text-white">Linear</span>
           </div>
 
-          
           <div className="hidden lg:flex space-x-14 text-sm font-medium text-gray-300">
-            
             {[
               "Features",
               "Method",
@@ -61,7 +56,6 @@ function NavBar() {
           </div>
 
           <div className="hidden md:flex lg:hidden space-x-24 text-sm font-medium text-gray-300">
-            
             {["Features", "Pricing", "Company"].map((link) => (
               <a
                 key={link}
@@ -73,21 +67,19 @@ function NavBar() {
             ))}
           </div>
 
-          
           <div className="flex items-center space-x-4 lg:space-x-2">
             <Link
               to="/login"
-              className="text-white font-medium text-sm px-2 py-1 rounded-lg hover:bg-gray-700 transition duration-300"
+              className="min-w-[5rem] text-white font-medium text-sm px-4 py-2 rounded-lg hover:bg-gray-700 transition duration-300"
               style={{ backgroundColor: "#23252a" }}
             >
               Log in
             </Link>
 
-            <button className="font-medium text-sm bg-white text-black px-2 py-1 rounded-lg hover:bg-gray-200 transition duration-300">
+            <button className="min-w-[5rem] font-medium text-sm bg-white text-black px-4 py-2 rounded-lg hover:bg-gray-200 transition duration-300">
               Sign up
             </button>
 
-            
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="text-white focus:outline-none flex flex-col justify-center items-center lg:hidden"
@@ -104,11 +96,9 @@ function NavBar() {
           </div>
         </div>
 
-        
         {isOpen && (
           <div className="flex flex-col items-start justify-between mt-8 w-full text-white h-[calc(100vh-80px)]">
             <div className="flex justify-between w-full px-4">
-              
               <div className="flex flex-col space-y-6 text-xl font-semibold">
                 {[
                   "Plan",
@@ -129,7 +119,6 @@ function NavBar() {
                 ))}
               </div>
 
-             
               <div className="flex flex-col space-y-6 text-xl font-semibold">
                 {[
                   "Build",
@@ -150,7 +139,6 @@ function NavBar() {
               </div>
             </div>
 
-            
             <div className="flex justify-start w-full px-4 space-x-4 mt-auto mb-8">
               <a href="#" className="text-gray-300 hover:text-white">
                 <img
@@ -166,8 +154,6 @@ function NavBar() {
                   className="w-5 h-5"
                 />
               </a>
-            
-
               <a href="#" className="text-gray-300 hover:text-white">
                 <img
                   src="/path/to/linkedin-icon.png"
@@ -184,5 +170,3 @@ function NavBar() {
 }
 
 export default NavBar;
-
-

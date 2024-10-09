@@ -2,20 +2,22 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import NavBar from './components/NavBar'; 
 import Hero from './components/Hero';  
- 
-import FrameComp from './components/FrameComp';
+import FrameComp from './components/FrameComp';  
 import ProductFeatures from './components/ProductFeatures';
 import WorkStreamsPage from './components/WorkStreamPage';
 import LoginPage from './components/LoginPage';
+import Padding from './components/Padding';  // Import the Padding component
 
+// Home Page component
 function HomePage() {
   return (
     <>
-      <Hero/>
-     
-      <FrameComp />
-      <ProductFeatures />
-      <WorkStreamsPage />
+      <Hero/>  {/* No padding applied to Hero */}
+      <Padding>  {/* Padding applied to the rest of the components */}
+        <FrameComp />
+        <ProductFeatures />
+        <WorkStreamsPage />
+      </Padding>
     </>
   );
 }
@@ -23,7 +25,6 @@ function HomePage() {
 function App() {
   return (
     <Router>
-      
       <NavBar />
 
       <Routes>
@@ -35,5 +36,3 @@ function App() {
 }
 
 export default App;
-
-

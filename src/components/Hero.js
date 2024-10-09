@@ -242,145 +242,202 @@ function Hero() {
   };
 
   return (
-    <section
-      className="relative h-screen bg-gray text-black flex flex-col items-start justify-start animate-fadeIn bg-black z-0 p-0"
-      style={{
-        backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1)), url(${hero})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center top 50px"  // Shift the background down by 50px
-      }}
-    >
-      <canvas
-        ref={canvasRef}
-        className="absolute top-0 left-0 w-full h-full z-0 pointer-events-none"
-      />
+    <>
+      {/* Desktop/Tablet View */}
+      <section
+        className="relative h-screen bg-gray text-black flex flex-col items-start justify-start animate-fadeIn bg-black z-0 p-0 hidden md:block"
+        style={{
+          backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1)), url(${hero})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center top"
+        }}
+      >
+        <canvas
+          ref={canvasRef}
+          className="absolute top-0 left-0 w-full h-full z-0 pointer-events-none"
+        />
 
-      <div className="absolute w-full h-[20vh] top-[60%] bg-gradient-to-t from-black to-transparent" />
-      <div className="absolute bottom-0 left-0 w-full h-[20%] bg-black z-10" />
+        <div className="absolute w-full h-[20vh] top-[60%] bg-gradient-to-t from-black to-transparent" />
+        <div className="absolute bottom-0 left-0 w-full h-[20%] bg-black z-10" />
 
-      {/* Content */}
-      <div className="relative bottom-10 md:bottom-20 left-1/3 top-[35rem] transform -translate-x-1/2 z-20 text-center md:text-left px-4 w-full max-w-2xl">
-        <p
-          className="mb-4"
-          style={{
-            ...commonStyles,
-            fontWeight: 510,
-            color: "rgb(130, 143, 255)",
-            fontSize: "13px",
-            lineHeight: "19px"
-          }}
-        >
-          Introducing Linear Mobile
-        </p>
-
-        <h1
-          className="mb-6"
-          style={{
-            ...commonStyles,
-            fontWeight: 590,
-            color: "rgb(247, 248, 248)",
-            fontSize: "48px",
-            lineHeight: "52px"
-          }}
-        >
-          The portable companion <br /> to the Linear system
-        </h1>
-
-        <p
-          className="mb-4"
-          style={{
-            ...commonStyles,
-            fontWeight: 510,
-            color: "rgba(255, 255, 255, 0.7)",
-            fontSize: "21px",
-            lineHeight: "28px"
-          }}
-        >
-          Complex workflows in compact form. <br /> Available for iOS and
-          Android.
-        </p>
-      </div>
-
-      {/* QR Code Section */}
-      <div className="absolute right-[15%] top-[38rem] flex flex-col gap-4">
-        <div className="p-2 border-2 border-gray-300 rounded-lg bg-black hover:bg-gray-800 transition duration-300">
+        {/* Content */}
+        <div className="max-w-screen-md mx-auto relative bottom-10 md:bottom-20 left-1/3 top-[35rem] transform -translate-x-1/2 z-20 text-center md:text-left px-4 py-8 w-full max-w-2xl">
           <p
+            className="mb-4"
             style={{
               ...commonStyles,
               fontWeight: 510,
-              color: "rgb(247, 248, 248)", 
-              fontSize: "14px", 
-              lineHeight: "21px"
+              color: "rgb(130, 143, 255)",
+              fontSize: "13px",
+              lineHeight: "19px"
             }}
           >
-            Scan this QR
+            Introducing Linear Mobile
           </p>
-          <div className="mt-1">
-            <img
-              src="https://via.placeholder.com/80"
-              alt="QR Code"
-              className="w-20 h-20 object-contain mx-auto"
-            />
+
+          <h1
+            className="mb-6"
+            style={{
+              ...commonStyles,
+              fontWeight: 590,
+              color: "rgb(247, 248, 248)",
+              fontSize: "48px",
+              lineHeight: "52px"
+            }}
+          >
+            The portable companion <br /> to the Linear system
+          </h1>
+
+          <p
+            className="mb-4"
+            style={{
+              ...commonStyles,
+              fontWeight: 510,
+              color: "rgba(255, 255, 255, 0.7)",
+              fontSize: "21px",
+              lineHeight: "28px"
+            }}
+          >
+            Complex workflows in compact form. <br /> Available for iOS and Android.
+          </p>
+        </div>
+
+        {/* QR Code and Download Buttons */}
+        <div className="z-[15] absolute right-[15%] top-[38rem] flex flex-col gap-4 md:flex-row">
+          <div className="p-2 border-2 border-gray-300 rounded-lg bg-black hover:bg-gray-800 transition duration-300">
+            <p
+              style={{
+                ...commonStyles,
+                fontWeight: 510,
+                color: "rgb(247, 248, 248)", 
+                fontSize: "14px", 
+                lineHeight: "21px"
+              }}
+            >
+              Scan this QR
+            </p>
+            <div className="mt-1">
+              <img
+                src="https://via.placeholder.com/80"
+                alt="QR Code"
+                className="w-20 h-20 object-contain mx-auto"
+              />
+            </div>
+          </div>
+
+          <div className="grid grid-cols-2 gap-2">
+            <a
+              href="#"
+              className="flex items-center justify-between p-2 border-2 border-gray-300 rounded-lg bg-black hover:bg-gray-800 transition duration-300"
+            >
+              <div className="text-white">
+                <p
+                  style={{
+                    ...commonStyles,
+                    fontWeight: 510,
+                    color: "rgb(247, 248, 248)", 
+                    fontSize: "14px", 
+                    lineHeight: "21px" 
+                  }}
+                >
+                  Open in App Store
+                </p>
+                <img
+                  src="https://via.placeholder.com/24/000000/FFFFFF/?text=🍏" 
+                  alt="Apple Logo"
+                  className="w-6 h-6 mt-1"
+                />
+              </div>
+              <span className="text-white text-lg">&rarr;</span>
+            </a>
+
+            <a
+              href="#"
+              className="flex items-center justify-between p-2 border-2 border-gray-300 rounded-lg bg-black hover:bg-gray-800 transition duration-300"
+            >
+              <div className="text-white">
+                <p
+                  style={{
+                    ...commonStyles,
+                    fontWeight: 510,
+                    color: "rgb(247, 248, 248)", 
+                    fontSize: "14px", 
+                    lineHeight: "21px" 
+                  }}
+                >
+                  Open in Play Store
+                </p>
+                <img
+                  src="https://via.placeholder.com/24/000000/FFFFFF/?text=📱" 
+                  alt="Google Play Logo"
+                  className="w-6 h-6 mt-1"
+                />
+              </div>
+              <span className="text-white text-lg">&rarr;</span>
+            </a>
           </div>
         </div>
+      </section>
 
-        <div className="grid grid-cols-2 gap-2">
+      {/* Mobile View */}
+      <section
+        className="block md:hidden relative h-screen bg-black text-white p-8 flex flex-col justify-center items-center text-center"
+        style={{
+          backgroundImage: `url(${hero})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center"
+        }}
+      >
+        {/* Hero Text */}
+        <div className="z-20 mt-[40rem]">
+          <p
+            className="text-sm text-blue-400 mb-2"
+            style={{ fontWeight: 510 }}
+          >
+            Introducing Linear Mobile
+          </p>
+
+          <h1
+            className="text-3xl mb-4"
+            style={{ fontWeight: 590 }}
+          >
+            The portable companion <br /> to the Linear system
+          </h1>
+
+          <p
+            className="text-md text-gray-300 mb-6"
+            style={{ fontWeight: 510 }}
+          >
+            Complex workflows in compact form. <br /> Available for iOS and Android.
+          </p>
+        </div>
+
+        {/* Download Button */}
+        <div className="mt-4">
           <a
             href="#"
-            className="flex items-center justify-between p-2 border-2 border-gray-300 rounded-lg bg-black hover:bg-gray-800 transition duration-300"
+            className="inline-flex items-center px-4 py-3 bg-white text-black border border-gray-600 rounded-lg hover:bg-gray-800 transition-all"
           >
-            <div className="text-white">
-              <p
-                style={{
-                  ...commonStyles,
-                  fontWeight: 510,
-                  color: "rgb(247, 248, 248)", 
-                  fontSize: "14px", 
-                  lineHeight: "21px" 
-                }}
-              >
-                Open in App Store
-              </p>
-              <img
-                src="https://via.placeholder.com/24/000000/FFFFFF/?text=🍏" 
-                alt="Apple Logo"
-                className="w-6 h-6 mt-1"
-              />
-            </div>
-            <span className="text-white text-lg">&rarr;</span>
-          </a>
-
-          <a
-            href="#"
-            className="flex items-center justify-between p-2 border-2 border-gray-300 rounded-lg bg-black hover:bg-gray-800 transition duration-300"
-          >
-            <div className="text-white">
-              <p
-                style={{
-                  ...commonStyles,
-                  fontWeight: 510,
-                  color: "rgb(247, 248, 248)", 
-                  fontSize: "14px", 
-                  lineHeight: "21px" 
-                }}
-              >
-                Open in Play Store
-              </p>
-              <img
-                src="https://via.placeholder.com/24/000000/FFFFFF/?text=📱" 
-                alt="Google Play Logo"
-                className="w-6 h-6 mt-1"
-              />
-            </div>
-            <span className="text-white text-lg">&rarr;</span>
+            <img
+              src="https://via.placeholder.com/24/000000/FFFFFF/?text=🍏"
+              alt="App Store"
+              className="mr-3"
+            />
+            Download on the App Store
           </a>
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 }
 
 export default Hero;
+
+
+
+
+
+
 
 
 

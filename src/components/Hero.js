@@ -499,64 +499,66 @@ function Hero() {
         </div>
       </section>
 
-  {/* Mobile View */}
-<section className="block md:hidden relative h-screen bg-black text-white flex flex-col pb-[10rem] justify-end items-center text-center"> 
+{/* Mobile View */}
+<section className="block md:hidden relative h-screen bg-black text-white flex flex-col justify-end items-center text-center">
   {/* Background Image */}
   <div
-    className="absolute top-0 left-0 w-full  h-[55%] bg-black"
+    className="absolute top-0 left-0 w-full h-[48%] bg-black"
     style={{
       backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1)), url(${hero})`,
       backgroundSize: "cover",
       backgroundPosition: "center top",
     }}
   />
-  <canvas
-          ref={canvasRef}
-          className="absolute top-0 left-0 w-full h-full pointer-events-none"></canvas>
 
   {/* Content Overlay Div */}
-  <div className="relative z-20 flex flex-col justify-end items-center text-center w-full min-h-full pb-24"> 
-  
-    <p className="text-sm text-blue-400 mb-2 font-medium">
-      Introducing Linear Mobile
-    </p>
+  <div className="relative z-20 flex flex-col justify-end items-center text-center w-full min-h-screen pb-0 mb-28">
+    <div className="flex flex-col justify-center items-center mt-auto mb-2"> {/* Adjusted mb-8 */}
+      <p className="text-sm text-blue-400 mb-2 font-medium">
+        Introducing Linear Mobile
+      </p>
 
-    <h1 className="text-2xl mb-4 font-semibold leading-tight">
-      The portable companion <br /> to the Linear system
-    </h1>
+      <h1 className="text-2xl mb-4 font-bold leading-tight">
+        The portable companion <br /> to the Linear system
+      </h1>
 
-    <p className="text-md text-gray-300 mb-6 font-medium">
-      Complex workflows in compact form. <br /> Available for iOS and Android.
-    </p>
+      <p className="text-xs text-gray-300 mb-4 font-medium"> {/* Adjusted mb-4 */}
+        Complex workflows in compact form. <br /> Available for iOS and Android.
+      </p>
+    </div>
 
     {/* Download Buttons */}
-    <div className="grid grid-cols-1 gap-2 w-10/12 justify-end items-center">
+    <div className="flex flex-col gap-2 w-[70%] justify-center items-center mb-10"> {/* Adjusted mb-10 */}
       <a
         href="#"
-        className="flex items-center w-[78%] justify-center p-3 bg-white text-black rounded-lg hover:bg-gray-200 transition duration-300"
+        className="flex items-center justify-center w-[78%] p-2 bg-white text-black rounded-lg hover:bg-gray-200 transition duration-300"
       >
         <img
           src="https://via.placeholder.com/24/000000/FFFFFF/?text=🍏"
           alt="Apple Logo"
           className="mr-2"
         />
-        Download on the App Store
+        <p className="text-xs">Download on the App Store</p>
       </a>
 
       <a
         href="#"
-        className="flex items-center w-[78%] justify-center p-3 bg-white text-black rounded-lg hover:bg-gray-200 transition duration-300"
+        className="flex items-center justify-center w-[78%] p-2 bg-white text-black rounded-lg hover:bg-gray-200 transition duration-300"
       >
         <img
           src="https://via.placeholder.com/24/000000/FFFFFF/?text=📱"
           alt="Google Play Logo"
           className="mr-2"
         />
-        Get it on Google Play
+        <p className="text-xs">Get it on Google Play</p>
       </a>
     </div>
   </div>
 </section>
+
+
+
+
 
 
 

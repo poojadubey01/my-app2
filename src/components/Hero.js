@@ -503,7 +503,7 @@ function Hero() {
 <section className="block md:hidden relative h-screen bg-black text-white flex flex-col justify-end items-center text-center">
   {/* Background Image */}
   <div
-    className="absolute top-0 left-0 w-full h-[48%] bg-black"
+    className="absolute top-0 left-0 w-full h-[52%] bg-black"
     style={{
       backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1)), url(${hero})`,
       backgroundSize: "cover",
@@ -512,23 +512,23 @@ function Hero() {
   />
 
   {/* Content Overlay Div */}
-  <div className="relative z-20 flex flex-col justify-end items-center text-center w-full min-h-screen pb-0 mb-28">
+  <div className="relative z-20 flex flex-col justify-end items-center text-center w-full min-h-screen pb-0 mt-auto mb-35">
     <div className="flex flex-col justify-center items-center mt-auto mb-2"> {/* Adjusted mb-8 */}
       <p className="text-sm text-blue-400 mb-2 font-medium">
         Introducing Linear Mobile
       </p>
 
-      <h1 className="text-2xl mb-4 font-bold leading-tight">
+      <h1 className="text-3xl mb-4 font-bold leading-tight">
         The portable companion <br /> to the Linear system
       </h1>
 
-      <p className="text-xs text-gray-300 mb-4 font-medium"> {/* Adjusted mb-4 */}
+      <p className="text-sm text-gray-300 mb-4 font-medium"> {/* Adjusted mb-4 */}
         Complex workflows in compact form. <br /> Available for iOS and Android.
       </p>
     </div>
 
     {/* Download Buttons */}
-    <div className="flex flex-col gap-2 w-[70%] justify-center items-center mb-10"> {/* Adjusted mb-10 */}
+    <div className="flex flex-col gap-2 w-[80%] justify-center items-center mb-10"> {/* Adjusted mb-10 */}
       <a
         href="#"
         className="flex items-center justify-center w-[78%] p-2 bg-white text-black rounded-lg hover:bg-gray-200 transition duration-300"
@@ -538,7 +538,7 @@ function Hero() {
           alt="Apple Logo"
           className="mr-2"
         />
-        <p className="text-xs">Download on the App Store</p>
+        <p className="text-sm">Download on the App Store</p>
       </a>
 
       <a
@@ -550,7 +550,7 @@ function Hero() {
           alt="Google Play Logo"
           className="mr-2"
         />
-        <p className="text-xs">Get it on Google Play</p>
+        <p className="text-sm">Get it on Google Play</p>
       </a>
     </div>
   </div>

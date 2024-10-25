@@ -4,9 +4,10 @@ import NavBar from './components/NavBar';
 import Hero from './components/Hero';  
 import FrameComp from './components/FrameComp';  
 import ProductFeatures from './components/ProductFeatures';
-import WorkStreamsPage from './components/WorkStreamPage';
+import WorkStreamsPage from './components/WorkStreamPage'
 import LoginPage from './components/LoginPage';
 import Padding from './components/Padding';  // Import the Padding component
+import FocusPage from './components/FocusPage';
 
 // Home Page component
 function HomePage() {
@@ -17,6 +18,7 @@ function HomePage() {
         <FrameComp />
         <ProductFeatures />
         <WorkStreamsPage />
+        <FocusPage />
       </Padding>
     </>
   );

@@ -1,5 +1,5 @@
 import React from 'react';
-import Phone2 from '../assets/inbox.jpg'; 
+import Phone2 from '../assets/inbox.jpg'; // Use your inbox image here
 
 function WorkStreamsPage() {
   return (
@@ -25,7 +25,7 @@ function WorkStreamsPage() {
           src={Phone2} 
           alt="Phone Inbox"
           className="mx-auto rounded-lg shadow-lg object-cover object-center"
-         
+          style={{ maxHeight: '500px', maxWidth: '100%' }}
         />
 
        

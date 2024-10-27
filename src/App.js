@@ -8,7 +8,10 @@ import WorkStreamsPage from './components/WorkStreamPage'
 import LoginPage from './components/LoginPage';
 import Padding from './components/Padding';  // Import the Padding component
 import FocusPage from './components/FocusPage';
-
+import ComposerSection from './components/ComposerSection';
+import IssuePage from './components/IssuePage';
+import ProjectPage from './components/ProjectPage';
+import NotificationPage from './components/NotificationPage';
 // Home Page component
 function HomePage() {
   return (
@@ -19,6 +22,10 @@ function HomePage() {
         <ProductFeatures />
         <WorkStreamsPage />
         <FocusPage />
+        <ComposerSection />
+        <IssuePage />
+        <ProjectPage />
+        <NotificationPage />
       </Padding>
     </>
   );

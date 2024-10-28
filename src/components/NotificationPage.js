@@ -1,28 +1,26 @@
 import React from 'react';
-import NotificationImage from '../assets/Notify.jpg'; // Placeholder for the left image
+import NotificationImage from '../assets/Notify.jpg'; // Placeholder for the background image
 
 function NotificationPage() {
   return (
-    <div className="bg-black text-white py-20 px-4">
-      <div className="container mx-auto grid lg:grid-cols-2 gap-10">
+    <div className="relative bg-black text-white py-20 px-4">
+      {/* Background Image */}
+      <div className="relative">
+        <img
+          src={NotificationImage}
+          alt="Notification"
+          className="w-full h-full object-cover rounded-lg shadow-lg"
+        />
 
-        {/* Left Image */}
-        <div className="flex justify-center lg:justify-start">
-          <img
-            src={NotificationImage}
-            alt="Notification"
-            className="rounded-lg shadow-lg"
-          />
-        </div>
-
-        {/* Right Content */}
-        <div className="space-y-6">
+        {/* Overlay Content on the Right */}
+        <div className="absolute top-0 right-0 w-full md:w-1/2 h-full bg-gradient-to-l from-black via-transparent to-transparent px-8 py-16 flex flex-col justify-center space-y-6">
           <h2 className="text-4xl font-bold">Available 24/7. <br /> Or just 9–5.</h2>
-          <p className="text-gray-400">
+          <p className="text-gray-300">
             Receive push notifications about important updates in realtime (but not all the time).
           </p>
           
-          <div className="flex space-x-4 mt-8">
+          <div className="flex space-x-6 mt-8">
+            {/* Realtime Notifications */}
             <div className="text-center">
               <div className="w-12 h-12 bg-gray-700 rounded-full flex items-center justify-center mb-2">
                 <span className="text-xl">📲</span>
@@ -33,6 +31,7 @@ function NotificationPage() {
               </p>
             </div>
 
+            {/* Notification Schedule */}
             <div className="text-center">
               <div className="w-12 h-12 bg-gray-700 rounded-full flex items-center justify-center mb-2">
                 <span className="text-xl">⏰</span>
@@ -44,7 +43,6 @@ function NotificationPage() {
             </div>
           </div>
         </div>
-
       </div>
     </div>
   );

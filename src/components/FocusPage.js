@@ -10,13 +10,13 @@ function FocusPage() {  // Changed component name to FocusPage
         {/* Left Section */}
         <div className="lg:w-1/2 text-center lg:text-left">
           {/* Title */}
-          <h2 className="text-2xl lg:text-4xl font-semibold mb-6 leading-tight">
+          <h2 className="text-2xl lg:text-2xl font-semibold mb-2 leading-tight">
             React to what matters most...
           </h2>
 
           {/* Subheading */}
           <p className="text-sm lg:text-lg text-gray-400 mb-8 leading-relaxed">
-            Discuss and update issue details on the fly to unblock your team and keep work progressing.
+            Discuss and update issue details on the fly <br></br>to unblock your team and keep work <br></br> progressing.
           </p>
 
           {/* Phone Image */}
@@ -32,13 +32,13 @@ function FocusPage() {  // Changed component name to FocusPage
         {/* Right Section */}
         <div className="lg:w-1/2 text-center lg:text-left">
           {/* Title */}
-          <h2 className="text-2xl lg:text-4xl font-semibold mb-6 leading-tight">
+          <h2 className="text-2xl lg:text-2xl font-semibold mb-2 leading-tight">
             ...snooze the rest for later
           </h2>
 
           {/* Subheading */}
           <p className="text-sm lg:text-lg text-gray-400 mb-8 leading-relaxed">
-            Temporarily remove notifications from your inbox to focus on what matters in the present moment.
+            Temporarily remove notifications from your <br></br>inbox to focus on what matters in the <br></br>present moment.
           </p>
 
           {/* Phone Image */}

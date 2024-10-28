@@ -12,6 +12,7 @@ import ComposerSection from './components/ComposerSection';
 import IssuePage from './components/IssuePage';
 import ProjectPage from './components/ProjectPage';
 import NotificationPage from './components/NotificationPage';
+import Footer from './components/footer'
 // Home Page component
 function HomePage() {
   return (
@@ -26,6 +27,7 @@ function HomePage() {
         <IssuePage />
         <ProjectPage />
         <NotificationPage />
+        <Footer />
       </Padding>
     </>
   );

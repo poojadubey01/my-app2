@@ -95,7 +95,6 @@ export default Hero;*/
 
 
 
-
 import React, { useEffect, useRef } from "react";
 import hero from "../assets/hero.jpg";
 
@@ -140,98 +139,100 @@ function Hero() {
   return (
     <>
       {/* Desktop/Tablet View */}
-<section className="relative h-screen flex flex-col md:flex-row justify-center items-center animate-fadeIn hidden md:flex">
-  {/* Background Image Div */}
-  <div
-    className="absolute top-0 left-0 w-full h-full md:h-full bg-black"
-    style={{
-      backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1)), url(${hero})`,
-      backgroundSize: "cover",
-      backgroundPosition: "center top",
-    }}
-  />
+      <section className="relative h-screen flex flex-col md:flex-row justify-center items-center animate-fadeIn hidden md:flex pb-20">
+        {/* Background Image Div */}
+        <div
+          className="absolute top-0 left-0 w-full h-full bg-black z-0"
+          style={{
+            backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1)), url(${hero})`,
+            backgroundSize: "cover",
+            backgroundPosition: "center top",
+          }}
+        />
 
-  {/* Noise Effect */}
-  <canvas
-    ref={canvasRef}
-    className="absolute top-0 left-0 w-full h-full pointer-events-none"
-  />
-  <div className="absolute w-full h-[20vh] top-[60%] bg-gradient-to-t from-black to-transparent"></div>
+        {/* Noise Effect */}
+        <canvas
+          ref={canvasRef}
+          className="absolute top-0 left-0 w-full h-full pointer-events-none z-10"
+        />
+        <div className="absolute w-full h-[20vh] top-[60%] bg-gradient-to-t from-black to-transparent z-10"></div>
 
-  {/* Background Bottom Div */}
-  <div className="absolute bottom-0 left-0 w-full h-[20%] bg-black z-10 flex justify-center items-center pb-10">
-    {/* Content and Buttons Section */}
-    <div className="relative z-20 flex flex-col md:flex-row justify-between items-center text-center md:text-left w-full max-w-screen-lg px-4">
-      {/* Left Content */}
-      <div className="w-full md:w-1/2 py-8">
-        <p className="mb-4 text-blue-400 text-xs font-medium">
-          Introducing Linear Mobile
-        </p>
+        {/* Background Bottom Div */}
+        <div className="absolute bottom-0 left-0 w-full h-[20%] bg-black z-20 flex justify-center items-center pb-10">
+          {/* Content and Buttons Section */}
+          <div className="relative z-30 flex flex-col md:flex-row justify-between items-center text-center md:text-left w-full max-w-screen-lg px-4">
+            {/* Left Content */}
+            <div className="w-full md:w-1/2 py-8">
+              <p className="mb-4 text-blue-400 text-xs font-medium">
+                Introducing Linear Mobile
+              </p>
 
-        <h1 className="mb-6 text-white text-4xl font-semibold leading-tight">
-          The portable companion <br /> to the Linear system
-        </h1>
+              <h1 className="mb-6 text-white text-4xl font-semibold leading-tight">
+                The portable companion <br /> to the Linear system
+              </h1>
 
-        <p className="mb-4 text-white/70 text-lg font-medium leading-7">
-          Complex workflows in compact form. <br /> Available for iOS and Android.
-        </p>
-      </div>
+              <p className="mb-4 text-white/70 text-lg font-medium leading-7">
+                Complex workflows in compact form. <br /> Available for iOS and Android.
+              </p>
+            </div>
 
-      {/* Right Side (QR Code and Download Buttons) */}
-      <div className="w-full md:w-1/2 flex flex-col justify-center items-center">
-        <div className="p-2 border-2 border-gray-300 rounded-lg bg-black hover:bg-gray-800 transition duration-300">
-          <p className="text-white text-sm font-medium">Scan this QR</p>
-          <div className="mt-1">
-            <img
-              src="https://via.placeholder.com/80"
-              alt="QR Code"
-              className="w-20 h-20 object-contain mx-auto"
-            />
+            {/* Right Side (QR Code and Download Buttons) */}
+            <div className="w-full md:w-1/2 flex flex-col justify-center items-center">
+              <div className="p-2 border-2 border-gray-300 rounded-lg bg-black hover:bg-gray-800 transition duration-300">
+                <p className="text-white text-sm font-medium">Scan this QR</p>
+                <div className="mt-1">
+                  <img
+                    src="https://via.placeholder.com/80"
+                    alt="QR Code"
+                    className="w-20 h-20 object-contain mx-auto"
+                  />
+                </div>
+              </div>
+
+              <div className="grid grid-cols-2 gap-2 mt-4">
+                <a
+                  href="#"
+                  className="flex items-center justify-between p-2 border-2 border-gray-300 rounded-lg bg-black hover:bg-gray-800 transition duration-300"
+                >
+                  <div>
+                    <p className="text-white text-sm font-medium">Open in App Store</p>
+                    <img
+                      src="https://via.placeholder.com/24/000000/FFFFFF/?text=🍏"
+                      alt="Apple Logo"
+                      className="w-6 h-6 mt-1"
+                    />
+                  </div>
+                  <span className="text-white text-lg">&rarr;</span>
+                </a>
+
+                <a
+                  href="#"
+                  className="flex items-center justify-between p-2 border-2 border-gray-300 rounded-lg bg-black hover:bg-gray-800 transition duration-300"
+                >
+                  <div>
+                    <p className="text-white text-sm font-medium">Open in Play Store</p>
+                    <img
+                      src="https://via.placeholder.com/24/000000/FFFFFF/?text=📱"
+                      alt="Google Play Logo"
+                      className="w-6 h-6 mt-1"
+                    />
+                  </div>
+                  <span className="text-white text-lg">&rarr;</span>
+                </a>
+              </div>
+            </div>
           </div>
         </div>
+      </section>
 
-        <div className="grid grid-cols-2 gap-2 mt-4">
-          <a
-            href="#"
-            className="flex items-center justify-between p-2 border-2 border-gray-300 rounded-lg bg-black hover:bg-gray-800 transition duration-300"
-          >
-            <div>
-              <p className="text-white text-sm font-medium">Open in App Store</p>
-              <img
-                src="https://via.placeholder.com/24/000000/FFFFFF/?text=🍏"
-                alt="Apple Logo"
-                className="w-6 h-6 mt-1"
-              />
-            </div>
-            <span className="text-white text-lg">&rarr;</span>
-          </a>
-
-          <a
-            href="#"
-            className="flex items-center justify-between p-2 border-2 border-gray-300 rounded-lg bg-black hover:bg-gray-800 transition duration-300"
-          >
-            <div>
-              <p className="text-white text-sm font-medium">Open in Play Store</p>
-              <img
-                src="https://via.placeholder.com/24/000000/FFFFFF/?text=📱"
-                alt="Google Play Logo"
-                className="w-6 h-6 mt-1"
-              />
-            </div>
-            <span className="text-white text-lg">&rarr;</span>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
+      {/* Spacer to create a gap between desktop and mobile sections */}
+      <div className="h-40 bg-black"></div>
 
       {/* Mobile View */}
-      <section className="block md:hidden relative h-screen bg-black text-white flex flex-col justify-end items-center text-center">
+      <section className="block md:hidden relative h-screen bg-black text-white flex flex-col justify-end items-center text-center pb-20">
         {/* Background Image */}
         <div
-          className="absolute top-0 left-0 w-full h-[52%] bg-black"
+          className="absolute top-0 left-0 w-full h-[52%] bg-black z-0"
           style={{
             backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1)), url(${hero})`,
             backgroundSize: "cover",
@@ -289,6 +290,7 @@ function Hero() {
 }
 
 export default Hero;
+
 
 
 

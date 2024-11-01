@@ -42,11 +42,11 @@ function FrameComp() {
         }`}
       >
         {/* Watch Demo Button */}
-        <button className="mb-4 px-4 py-2 bg-white text-black font-semibold rounded-lg shadow-lg hover:shadow-xl transition-transform duration-300 text-xs">
+        <button className="mb-5 px-4 py-2 bg-white text-black font-semibold rounded-lg shadow-lg hover:shadow-xl transition-transform duration-300 text-xs">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
-            className="w-4 h-4 inline mr-2"
+            className="w-5 h-5 inline mr-2"
             fill="currentColor"
           >
             <path d="M8 5v14l11-7z" />
@@ -58,11 +58,12 @@ function FrameComp() {
         <h2 className="text-sm xs:text-base md:text-lg font-bold mb-2">
           Built for “away from keyboard” activities.
         </h2>
-        <p className="text-xs xs:text-sm md:text-base">
-          Linear Mobile is purpose-designed for on-demand workflows that
-          complement the desktop experience. A powerful sidekick, always
-          available in your pocket.
-        </p>
+        <p className="text-gray-400 text-sm xs:text-sm md:text-base">
+  Linear Mobile is purpose-designed for on-demand workflows that
+  complement the desktop experience. A powerful sidekick, always
+  available in your pocket.
+</p>
+
       </div>
     </section>
   );

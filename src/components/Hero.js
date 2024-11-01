@@ -247,9 +247,9 @@ function Hero() {
               Introducing Linear Mobile
             </p>
 
-            <h1 className="text-3xl mb-4 font-bold leading-tight">
-              The portable companion <br /> to the Linear system
-            </h1>
+            <h1 className="mb-6 text-white text-4xl font-semibold leading-tight">
+  The portable companion <br /> to the Linear system
+</h1>
 
             <p className="text-sm text-gray-300 mb-4 font-medium">
               Complex workflows in compact form. <br /> Available for iOS and

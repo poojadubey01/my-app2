@@ -67,14 +67,19 @@ function NavBar() {
             ))}
           </div>
 
+          
           <div className="flex items-center space-x-4 lg:space-x-2">
-            <Link
-              to="/login"
-              className="min-w-[5rem] text-white font-medium text-sm px-4 py-2 rounded-lg hover:bg-gray-700 transition duration-300"
-              style={{ backgroundColor: "#23252a" }}
-            >
-              Log in
-            </Link>
+          <Link
+  to="/login"
+  className="flex items-center min-w-[5rem] text-white font-medium text-sm px-4 py-2 rounded-lg hover:bg-gray-700 transition duration-300"
+  style={{ backgroundColor: "#23252a" }}
+>
+  Log in
+  <span className="ml-2 text-white rounded-md square-full w-5 h-5 flex items-center justify-center" style={{ background: "#48484B"}}>
+    L
+  </span>
+</Link>
+
 
             <button className="min-w-[5rem] font-medium text-sm bg-white text-black px-4 py-2 rounded-lg hover:bg-gray-200 transition duration-300">
               Sign up
